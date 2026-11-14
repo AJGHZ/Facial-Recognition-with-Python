@@ -27,7 +27,7 @@ while True:
         print("Error: No se pudo iniciar la grabacíon. Asegúrese de que la cámara esté conectada y funcionando.")
         break
 
-    fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # Codec para el archivo de salida
+    fourcc = cv2.VideoWriter_fourcc(*'.mp4')  # Codec para el archivo de salida
     fps = 20.0  # Frames por segundo
     frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
