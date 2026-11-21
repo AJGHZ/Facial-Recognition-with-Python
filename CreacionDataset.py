@@ -1,6 +1,7 @@
 import cv2
 import os
 import csv
+import numpy as np
 
 #Rutas de configuración
 VIDEOS_DIR = "videos"   #Carpeta donde se encuentran los videos
