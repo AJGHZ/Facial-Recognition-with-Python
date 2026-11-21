@@ -49,7 +49,7 @@ for persona in os.listdir(VIDEOS_DIR):
 
             # Extraer un fotograma cada 15 frames para evitar redundancia
             if frame_count % 15 == 0:
-                gray = cv2.cvtcolor(frame, cv2.COLOR_BGR2GRAY)
+                gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
                 faces = face_cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=5, minSize=(60, 60))
 
                 for (x, y, w, h) in faces:
@@ -73,7 +73,7 @@ for persona in os.listdir(VIDEOS_DIR):
 
             frame_count += 1
 
-            cap.release()
-            print(f"Se han guardado {saved_count} imágenes de la persona: {persona} del video: {video_name}")
+        cap.release()
+        print(f"Se han guardado {saved_count} imágenes de la persona: {persona} del video: {video_name}")
 
 print(f'Dataset de rostros creado exitosamente. Datos guardados en: {CSV_FILE} y rostros guardados en la carpeta: {OUTPUT_DIR}.')
